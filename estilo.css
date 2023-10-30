@@ -1,0 +1,495 @@
+/* establecen valores predeterminados para todos los elementos en la página*/
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+/* anchura máxima de 2000 píxeles y lo centra en el medio de la página */
+.pagina{
+    display: flex;
+    max-width: 2000px;
+    margin: auto;
+}
+/* fondo de color gris claro (#eff1f2) y un ancho del 15% del contenedor padre*/
+.izquierda{
+    padding: 27px 64px 27px 27px;
+    width: 15%;
+    background-color: #eff1f2;
+}
+/* ancho del 85% del contenedor padre */
+.derecha{
+    width: 85%;
+}
+/* padding en los cuatro lados del elemento*/
+.dentro{
+    padding: 0 5em 0.1em 5em;
+}
+/* Se coloca a la izquierda del 100% y en la parte superior del 30% del contenedor padre */
+.buscador span{
+    position: absolute;
+    left: 100%;
+    top: 30%;
+}
+/* relleno en los lados izquierdo y derecho del input, un mínimo de altura (2.75em), una altura del 100% del contenedor padre y un ancho del 100% */
+.buscadorestilo input{
+    padding: 0 16px;
+    min-height: 2.75em;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+}
+/* estos elementos tendrán una posición relativa en el diseño */
+.buscadorestilo {
+    position: relative;
+}
+/* Clase que configura un encabezado con un diseño flexible, borde inferior, relleno y colores.*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 5px #f56a6a;
+    padding-bottom: 16px;
+}
+/* Estilo para enlaces dentro del encabezado, controlando bordes, color, fuente y tamaño.*/
+.header a{
+    border-bottom: 0;
+    color: inherit;
+    font-family: "Roboto Slab", serif;
+    font-size: 1.125em;
+    text-decoration: none;
+    color: #7F888F;
+}
+/*  Aplica un color específico a texto fuerte dentro de los enlaces en el encabezado.*/
+.header a strong{
+    color: #3d4449
+}
+/* Define el tamaño de fuente y color para elementos <i> dentro del encabezado, como íconos.*/
+.header i{
+    font-size: 20px;
+    color: #7F888F;
+}
+/* Configura listas desordenadas dentro del encabezado, estableciendo un diseño flexible y espacio entre elementos.*/
+.header ul{
+    display: flex;
+    gap: 8px;
+}
+/* Configura elementos de lista dentro de elementos <ul> dentro del encabezado. Elimina los puntos de lista.*/
+.header ul li{
+    list-style: none;
+}
+/*  Estiliza un menú con un margen superior, un borde inferior y relleno.*/
+.menu{
+    margin-top: 60px;
+    border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+    padding: 0 0 3.5em 0;
+}
+/*  Establece el estilo de los títulos <h2> dentro del menú con un borde inferior, color, fuente, peso de fuente, interlineado, tamaño de fuente, ancho, y márgenes.*/
+.menu h2{
+    border-bottom: solid 3px #f56a6a;
+    color: #3d4449;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 1.38889em;
+    width: fit-content;
+    margin: 0 0 2em 0;
+}
+/* Define el estilo de elementos de lista dentro del menú con un borde superior, márgenes y relleno.*/
+.menu ul li{
+    list-style: none;
+    border-top: solid 1px rgba(210, 215, 217, 0.75);
+    margin: 1em 0 0 0;
+    padding: 1em 0 0 0;
+}
+/* Establece el estilo del primer elemento de la lista dentro del menú, eliminando el borde superior.*/
+.menu ul li:first-child{
+    list-style: none;
+    border-top: none;
+    margin: 1em 0 0 0;
+    padding: 1em 0 0 0;
+}
+/*  Aplica estilos a los enlaces dentro de elementos de lista en el menú, como fuente, tamaño, espaciado de letras, decoración de texto, color y relleno.*/
+.menu ul li a{
+    font-family: "Roboto Slab", serif;
+    font-size: 0.9em;
+    letter-spacing: 0.075em;
+    text-decoration: none;
+    color: #3d4449;
+    padding: 1em 0;
+}
+/* Cambia el color de los enlaces cuando se coloca el mouse sobre ellos y agrega una transición de 150 milisegundos para suavizar el cambio de color.*/
+.menu ul li:hover a{
+    color: #f56a6a;
+    transition: all 150ms;
+}
+/* Establece la altura de línea y el margen izquierdo para elementos con esta clase.*/
+.iconoarriba{
+    line-height: 6.25em;
+    margin-left: 24px;
+}
+/* Estiliza elementos <i> dentro de elementos con la clase "iconoarriba" con un color específico y un tamaño de fuente.*/
+.iconoarriba i{
+    color:#f56a6a;
+    font-size: 24px;
+}
+/* Configura un área central de la página con un diseño flexible, relleno y espacio entre elementos.*/
+.central{
+    display: flex;
+    padding: 5em 0 3em 0;
+    gap: 50px;
+}
+/* Establece el ancho de esta área central en un 50% de su contenedor.*/
+.contenido-central{
+    width: 50%;
+}
+/* Estiliza los títulos <h2> dentro del área central con un tamaño de fuente, márgenes, altura de línea, color, fuente y peso de fuente específicos.*/
+.contenido-central h2{
+    font-size: 3.5em;
+    margin: 0 0 0.5em 0;
+    line-height: 1.3;
+    color: #3d4449;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+}
+/* Define el estilo de los párrafos dentro del área central con márgenes, fuente, tamaño de fuente, espaciado de letras, color y márgenes inferiores específicos.*/
+.contenido-central p{
+    margin-top: 20px;
+    font-family: "Roboto Slab", serif;
+    font-size: 1em;
+    letter-spacing: 0.075em;
+    color: #7f888f;
+    margin-bottom: 32px;
+}
+/* Estiliza los títulos <h5> dentro del área central con fuente, tamaño de fuente, peso de fuente, espaciado de letras, margen superior negativo y transformación de texto a mayúsculas.*/
+.contenido-central h5{
+    font-family: "Roboto Slab", serif;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.075em;
+    margin-top: -0.5em;
+    text-transform: uppercase;
+    color: #7f888f;
+}
+/* Establece el estilo de los enlaces dentro del área central, incluyendo la apariencia de botones con un fondo transparente, bordes redondeados, sombra, color de texto, cursor, fuente, tamaño de fuente, peso de fuente, espaciado de letras, altura de línea, relleno, decoración de texto y transformación de texto a mayúsculas.*/
+.contenido-central a{
+    background-color: transparent;
+    border-radius: 0.375em;
+    border: 0;
+    box-shadow: inset 0 0 0 2px #f56a6a;
+    color: #f56a6a;
+    cursor: pointer;
+    font-family: "Roboto Slab", serif;
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    line-height: 3.5em;
+    padding: 0 2.25em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 12px 24px ;
+    margin-top: 32px;
+}
+/* Define un área para una imagen central con un ancho del 50%, usando un diseño flexible y alineando los elementos verticalmente.*/
+.imagen-central{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+/* Establece estilos para las imágenes dentro del área de la imagen central, ajustando su ancho para llenar el contenedor utilizando una propiedad específica del navegador webkit.*/
+.imagen-central img{
+    width: -webkit-fill-available;
+}
+/* Configura un área "medio" en la página con relleno, un borde superior y estilos para títulos.*/
+.medio{
+    padding: 5em 0 3em 0;
+    border-top: solid 2px rgba(210, 215, 217, 0.75);
+}
+/* Estiliza los títulos <h2> dentro del área "medio" con un borde inferior, visualización en línea, márgenes, color, fuente, peso de fuente y altura de línea específicos.*/
+.medio h2{
+    border-bottom: solid 3px #f56a6a;
+    display: inline-block;
+    margin: 0 0 2em 0;
+    padding: 0 0.75em 0.5em 0;
+    color: #3d4449;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    line-height: 1.5;
+}
+/* Define un área "medio2" con un diseño flexible que permite que los elementos se envuelvan en varias líneas.*/
+.medio2{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Estiliza los títulos <h3> dentro del área "medio2" con un tamaño de fuente, color, fuente, peso de fuente y altura de línea específicos.*/
+.medio2 h3{
+    font-size:1.25em;
+    color: #3d4449;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+}
+/* Establece el estilo de los párrafos dentro del área "medio2" con fuente, tamaño de fuente, espaciado de letras y color específicos.*/
+.medio2 p{
+    font-family: "Roboto Slab", serif;
+    font-size: 1em;
+    letter-spacing: 0.075em;
+    color: #7f888f;
+}
+/* Configura artículos en el área "medio2" con un ancho del 50%, utilizando un diseño flexible y estableciendo márgenes superiores.*/
+.medio2 article{
+    width: 50%;
+    display: flex;
+    margin: 30px 0;
+}
+/* Establece estilos para elementos <i> dentro de los artículos, como color, tamaño de fuente y una rotación.*/
+article i{
+    color: #f56a6a;
+    font-size: 2.75rem;
+    transform: rotate(315deg);
+}
+/* Estiliza los elementos <span> dentro de elementos <article>. Establece un borde con un ancho de 2 píxeles y un color específico, una transformación de rotación de 45 grados, relleno, diseño flexible y ancho ajustado al contenido.*/
+article span{
+    border: solid 2px rgba(210, 215, 217, 0.75);
+    transform: rotate(45deg);
+    padding: 10px;
+    display: flex;
+    width: fit-content;
+}
+/* Configura un área llamada "abajo" con relleno, un borde superior y estilos para elementos dentro de esta área.*/
+.abajo{
+    padding: 5em 0 3em 0;
+    border-top: solid 2px rgba(210, 215, 217, 0.75);
+
+}
+/* Define un área llamada "abajo-container" con un diseño flexible que permite que los elementos se envuelvan en varias líneas.*/
+.abajo-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Estiliza los títulos <h2> dentro del área "titulo-abajo" con un borde inferior, visualización en línea, márgenes, color, fuente, peso de fuente y altura de línea específicos.*/
+.titulo-abajo h2{
+    border-bottom: solid 3px #f56a6a;
+    display: inline-block;
+    margin: 0 0 2em 0;
+    padding: 0 0.75em 0.5em 0;
+    color: #3d4449;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    line-height: 1.5;
+}
+/* Define el estilo de las fichas con un ancho máximo del 30%, bordes, relleno, diseño flexible en columna, alineación de elementos y alineación de texto a la izquierda.*/
+.fichas{
+    max-width:30%;
+    width: 100%;
+    border: 2px solid rgba(210, 215, 217, 0.75);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+/* Estiliza los títulos <h3> dentro de las fichas con color, fuente, peso de fuente, altura de línea, márgenes y tamaño de fuente específicos.*/
+.fichas h3{
+    color: #3d4449;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 0 1em 0;
+    font-size: 1.25em;
+    width: 100%;
+}
+/* Establece el estilo de los párrafos dentro de las fichas con color y fuente específicos.*/
+.fichas p{
+    color: #7f888f;
+    font-family: "Roboto Slab", serif;
+}
+/* Define el estilo de los enlaces dentro de las fichas con transiciones de color de fondo y color de texto, fondo transparente, bordes redondeados, sombra, color de texto, cursor, fuente, tamaño de fuente, peso de fuente, altura de línea, espaciado de letras, relleno, alineación de texto y transformación de texto a mayúsculas.*/
+.fichas a{
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-color: transparent;
+    border-radius: 0.375em;
+    border: 0;
+    box-shadow: inset 0 0 0 2px #f56a6a;
+    color: #f56a6a ;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Roboto Slab", serif;
+    font-size: 0.8em;
+    font-weight: 700;
+    height: 3.5em;
+    letter-spacing: 0.075em;
+    line-height: 3.5em;
+    padding: 0 2.25em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: fit-content;
+}
+/* Añade un espacio en la parte superior con un relleno de 20 píxeles.*/
+.espacio{
+    padding-top: 20px;
+}
+/* Establece un tamaño fijo para elementos con la clase "giro" (altura de 100 píxeles y ancho de 350 píxeles).*/
+.giro{
+    
+    height: 100px;
+    width: 350px;
+}
+/* Establece márgenes superiores e izquierdos diferentes para elementos con estas clases.*/
+.giro2{
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.giro3{
+    margin-top: 25px;
+    margin-left: 27px;
+}
+
+.giro4{
+    margin-top: 30px;
+    margin-left: 35px;
+}
+/* Define un tamaño de fuente grande (50 píxeles) para elementos con esta clase.*/
+.grande{
+    font-size: 50px;
+}
+/* Agrega un margen izquierdo de 8 píxeles a elementos con esta clase.*/
+.esp{
+    margin-left: 8px;
+}
+/*  Establece márgenes superiores y un ancho del 100% para elementos con esta clase, además de estilizar títulos <h2> dentro de estos elementos.*/
+.imagenesizq{
+    margin-top: 3.5em;
+    width: 100%;
+}
+/* Agrega un borde inferior, margen y relleno a elementos con esta clase, y establece estilos para párrafos, imágenes y bordes redondeados.*/
+.imagenesizq h2{
+    border-bottom: solid 3px #f56a6a;
+    display: inline-block;
+    margin: 0 0 2em 0;
+    padding: 0 0.75em 0.5em 0;
+    color: #3d4449;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    line-height: 1.5;
+}
+/* Agrega un borde inferior, margen y relleno a elementos con esta clase, y establece estilos para párrafos, imágenes y bordes redondeados.*/
+.imagenesizq3{
+    border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+}
+/* Establece estilos para los párrafos dentro de elementos con la clase "imagenesizq3". Los estilos incluyen la fuente, tamaño de fuente, espaciado de letras, color y margen inferior.*/
+.imagenesizq3 p{
+    font-family: "Roboto Slab", serif;
+    font-size: 1em;
+    letter-spacing: 0.075em;
+    color: #7f888f;
+    margin-bottom: 32px;
+}
+/* Estiliza las imágenes dentro de elementos con la clase "imagenesizq3", agregando un borde redondeado y un margen inferior.*/
+.imagenesizq3 img{
+    border-radius: 0.375em;
+    margin-bottom: 1.5em;
+}
+/* Define el estilo de los enlaces dentro de elementos con la clase "imagenesizq3". Los estilos incluyen transiciones de color de fondo y color de texto, fondo transparente, bordes redondeados, sombra, color de texto, cursor, fuente, tamaño de fuente, peso de fuente, altura de línea, espaciado de letras, relleno, alineación de texto y transformación de texto a mayúsculas.*/
+.imagenesizq3 a{
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    background-color: transparent;
+    border-radius: 0.375em;
+    border: 0;
+    box-shadow: inset 0 0 0 2px #f56a6a;
+    color: #f56a6a ;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Roboto Slab", serif;
+    font-size: 0.8em;
+    font-weight: 700;
+    height: 3.5em;
+    letter-spacing: 0.075em;
+    line-height: 3.5em;
+    padding: 0 2.25em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: fit-content;
+}
+/* Establece estilos para los títulos <h2> dentro de elementos con la clase "contacto". Los estilos incluyen un borde inferior, visualización en línea, márgenes, color, fuente, peso de fuente y altura de línea.*/
+.contacto h2{
+    border-bottom: solid 3px #f56a6a;
+    display: inline-block;
+    margin: 0 0 2em 0;
+    padding: 0 0.75em 0.5em 0;
+    color: #3d4449;
+    font-family: "Roboto Slab", serif;
+    font-weight: 700;
+    line-height: 1.5;
+}
+/* Definen el estilo de los párrafos y enlaces dentro de elementos con la clase "contacto". Establecen tamaños de fuente, espaciado de letras, colores y márgenes inferiores.*/
+.contacto p{
+    font-size: 17px;
+    letter-spacing: 0.075em;
+    color: #7f888f;
+    margin-bottom: 32px;
+}
+/* Definen el estilo de los párrafos y enlaces dentro de elementos con la clase "contacto". Establecen tamaños de fuente, espaciado de letras, colores y márgenes inferiores.*/
+.contacto a{
+    font-size: 16px;
+    letter-spacing: 0.075em;
+    color: #7f888f;
+    margin-bottom: 32px;
+}
+/* Cambia el color de los enlaces en estado de "hover" (cuando se pasa el cursor sobre ellos) y agrega una transición suave de color.*/
+.contacto a:hover{
+    color: #f56a6a;
+    transition: all 150ms;
+}
+/* Establecen estilos para listas desordenadas y elementos de lista dentro de elementos con la clase "contacto". Incluyen tamaños de fuente, espaciado de letras, colores y márgenes.*/
+.contacto ul{
+    list-style: none;
+    font-size: 16px;
+    letter-spacing: 0.075em;
+    color: #7f888f;
+    margin-bottom: 32px;
+}
+/* Agrega un margen derecho de 10 píxeles a elementos <i> dentro de elementos con la clase "contacto".*/
+.contacto i{
+    margin-right: 10px;
+}
+/* Establece un margen vertical de 10 píxeles en elementos de lista dentro de elementos con la clase "contacto".*/
+.contacto li{
+    margin: 10px 0;
+}
+/* Oculta los elementos con la clase "menuizq2" que están dentro de elementos con la clase "menuizq".*/
+.menuizq .menuizq2 {
+    display: none;
+}
+/* Añade un margen izquierdo de 50 píxeles a elementos <i> dentro de elementos con la clase "menuizq".*/
+.menuizq i{
+    margin-left: 50px;
+}
+/* Muestra los elementos con la clase "menuizq2" cuando se coloca el mouse sobre elementos con la clase "menuizq".*/
+.menuizq:hover .menuizq2 {
+    display: block;
+}
+/* Establece que los elementos de lista dentro de elementos con la clase "menuizq2" se mostrarán como bloques y agrega un relleno a la izquierda.*/
+.menuizq2 li {
+    display: block;
+    padding-left: 20px;
+}
+/* Define el estilo de los enlaces dentro de elementos con la clase "menuizq2" con un color específico.*/
+.menuizq2 a{
+    color: #3d4449;
+}
+/* Limita el ancho de las imágenes dentro de elementos con la clase "fichas" al 95% de su tamaño original.*/
+.fichas img{
+    max-width: 95%;
+}
+/* Establece un ancho del 100% y un margen superior de 2em a elementos con la clase "fichas-boton".*/
+.fichas-boton{
+    width: 100%;
+    margin-top: 2em; 
+}
